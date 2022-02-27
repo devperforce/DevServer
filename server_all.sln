@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dev", "Dev\Dev.vcxproj", "{00732D9B-07AC-4B5D-BA11-CA587F4E3E2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{72BBC726-4E69-4030-918F-6A9CA7866822}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevServer", "DevServer", "{7A9B06AF-E9A5-4729-AAC3-5577CCDCA532}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{A237A766-4C7E-4E49-B1CF-7F4C4370F76F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Connection", "Connection\Connection.vcxproj", "{4BAC2DD5-8547-4593-8200-D5129C27E3D5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Protobuf", "Protobuf\Protobuf.vcxproj", "{688BCCD2-9876-4DFC-8BD0-68214E6DE79D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProtobufHandler", "ProtobufHandler\ProtobufHandler.vcxproj", "{3B4ADA72-39AC-4044-98FD-E8D7A0A37FCF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcxproj", "{0A129051-8378-4C8D-B08B-71E40F0A5634}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{280F4080-2F6E-4BBB-831B-BCF06C05B20C}"
+	ProjectSection(SolutionItems) = preProject
+		Config\ServerSetting.xml = Config\ServerSetting.xml
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Content", "Content\Content.vcxproj", "{FDA830C4-19DC-4B04-84A0-235AC501E469}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Database", "Database\Database.vcxproj", "{F71E90DA-AE99-490D-9BAD-4F454BAEA547}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00732D9B-07AC-4B5D-BA11-CA587F4E3E2E}.Debug|x64.ActiveCfg = Debug|x64
+		{00732D9B-07AC-4B5D-BA11-CA587F4E3E2E}.Debug|x64.Build.0 = Debug|x64
+		{00732D9B-07AC-4B5D-BA11-CA587F4E3E2E}.Release|x64.ActiveCfg = Release|x64
+		{00732D9B-07AC-4B5D-BA11-CA587F4E3E2E}.Release|x64.Build.0 = Release|x64
+		{4BAC2DD5-8547-4593-8200-D5129C27E3D5}.Debug|x64.ActiveCfg = Debug|x64
+		{4BAC2DD5-8547-4593-8200-D5129C27E3D5}.Debug|x64.Build.0 = Debug|x64
+		{4BAC2DD5-8547-4593-8200-D5129C27E3D5}.Release|x64.ActiveCfg = Release|x64
+		{4BAC2DD5-8547-4593-8200-D5129C27E3D5}.Release|x64.Build.0 = Release|x64
+		{688BCCD2-9876-4DFC-8BD0-68214E6DE79D}.Debug|x64.ActiveCfg = Debug|x64
+		{688BCCD2-9876-4DFC-8BD0-68214E6DE79D}.Debug|x64.Build.0 = Debug|x64
+		{688BCCD2-9876-4DFC-8BD0-68214E6DE79D}.Release|x64.ActiveCfg = Release|x64
+		{688BCCD2-9876-4DFC-8BD0-68214E6DE79D}.Release|x64.Build.0 = Release|x64
+		{3B4ADA72-39AC-4044-98FD-E8D7A0A37FCF}.Debug|x64.ActiveCfg = Debug|x64
+		{3B4ADA72-39AC-4044-98FD-E8D7A0A37FCF}.Debug|x64.Build.0 = Debug|x64
+		{3B4ADA72-39AC-4044-98FD-E8D7A0A37FCF}.Release|x64.ActiveCfg = Release|x64
+		{3B4ADA72-39AC-4044-98FD-E8D7A0A37FCF}.Release|x64.Build.0 = Release|x64
+		{0A129051-8378-4C8D-B08B-71E40F0A5634}.Debug|x64.ActiveCfg = Debug|x64
+		{0A129051-8378-4C8D-B08B-71E40F0A5634}.Debug|x64.Build.0 = Debug|x64
+		{0A129051-8378-4C8D-B08B-71E40F0A5634}.Release|x64.ActiveCfg = Release|x64
+		{0A129051-8378-4C8D-B08B-71E40F0A5634}.Release|x64.Build.0 = Release|x64
+		{FDA830C4-19DC-4B04-84A0-235AC501E469}.Debug|x64.ActiveCfg = Debug|x64
+		{FDA830C4-19DC-4B04-84A0-235AC501E469}.Debug|x64.Build.0 = Debug|x64
+		{FDA830C4-19DC-4B04-84A0-235AC501E469}.Release|x64.ActiveCfg = Release|x64
+		{FDA830C4-19DC-4B04-84A0-235AC501E469}.Release|x64.Build.0 = Release|x64
+		{F71E90DA-AE99-490D-9BAD-4F454BAEA547}.Debug|x64.ActiveCfg = Debug|x64
+		{F71E90DA-AE99-490D-9BAD-4F454BAEA547}.Debug|x64.Build.0 = Debug|x64
+		{F71E90DA-AE99-490D-9BAD-4F454BAEA547}.Release|x64.ActiveCfg = Release|x64
+		{F71E90DA-AE99-490D-9BAD-4F454BAEA547}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{00732D9B-07AC-4B5D-BA11-CA587F4E3E2E} = {7A9B06AF-E9A5-4729-AAC3-5577CCDCA532}
+		{4BAC2DD5-8547-4593-8200-D5129C27E3D5} = {72BBC726-4E69-4030-918F-6A9CA7866822}
+		{688BCCD2-9876-4DFC-8BD0-68214E6DE79D} = {A237A766-4C7E-4E49-B1CF-7F4C4370F76F}
+		{3B4ADA72-39AC-4044-98FD-E8D7A0A37FCF} = {A237A766-4C7E-4E49-B1CF-7F4C4370F76F}
+		{0A129051-8378-4C8D-B08B-71E40F0A5634} = {72BBC726-4E69-4030-918F-6A9CA7866822}
+		{FDA830C4-19DC-4B04-84A0-235AC501E469} = {7A9B06AF-E9A5-4729-AAC3-5577CCDCA532}
+		{F71E90DA-AE99-490D-9BAD-4F454BAEA547} = {72BBC726-4E69-4030-918F-6A9CA7866822}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8CE68E5-94EE-4796-8A36-08224E03B2A3}
+	EndGlobalSection
+EndGlobal

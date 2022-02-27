@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Chat">
+      <UniqueIdentifier>{dda19879-789f-4889-97bb-ad5dc3ef5ab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chat\Public">
+      <UniqueIdentifier>{b48deda2-da81-4769-bf92-210fa0d6cb50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Chat\Private">
+      <UniqueIdentifier>{d969b574-23fb-48c9-aa3f-3142a437d885}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol">
+      <UniqueIdentifier>{80a42c77-13af-4115-99de-c59a10546e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Public">
+      <UniqueIdentifier>{6684579d-be13-429f-89f3-4ede24d631b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Private">
+      <UniqueIdentifier>{8e70dcb7-309c-4340-bd27-61b1feb329ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Public\Handler">
+      <UniqueIdentifier>{d368e920-ca01-40e5-bdde-004d926fe17f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol\Private\Handler">
+      <UniqueIdentifier>{f244f71e-a2dc-4c3f-b9a4-2934a5d13c6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database">
+      <UniqueIdentifier>{29f7550e-429c-4a24-98ed-8084805c3134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database\Public">
+      <UniqueIdentifier>{38632a24-c708-470b-8fe9-f411ad66a619}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database\Private">
+      <UniqueIdentifier>{d4222b89-d327-40ce-be11-46c1c068f786}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Chat\Public\ChatController.h">
+      <Filter>Chat\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\Public\Handler\LobbyHandler.h">
+      <Filter>Protocol\Public\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\Public\Handler\DungeonHandler.h">
+      <Filter>Protocol\Public\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\Public\Handler\Protobuf.h">
+      <Filter>Protocol\Public\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Public\Connection.h">
+      <Filter>Database\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Database\Public\Query.h">
+      <Filter>Database\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol\Public\Session.h">
+      <Filter>Protocol\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Content.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Protocol\Private\Handler\LobbyHandler.cpp">
+      <Filter>Protocol\Private\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\Private\Handler\DungeonHandler.cpp">
+      <Filter>Protocol\Private\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="Database\Private\Connection.cpp">
+      <Filter>Database\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\Private\ChatController.cpp">
+      <Filter>Chat\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol\Private\Session.cpp">
+      <Filter>Protocol\Private</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

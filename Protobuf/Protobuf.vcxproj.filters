@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{20b96f34-fba6-4528-83de-d05b4c2888ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IDL">
+      <UniqueIdentifier>{61411e1d-db9e-4ba8-b4bc-71974ddf8b02}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Generated\world_status.pb.cc">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="Generated\common.pb.cc">
+      <Filter>Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="Generated\world_fighter.pb.cc">
+      <Filter>Generated</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Generated\world_status.pb.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="Generated\common.pb.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="Generated\world_fighter.pb.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IDL\world_status.proto">
+      <Filter>IDL</Filter>
+    </None>
+    <None Include="IDL\common.proto">
+      <Filter>IDL</Filter>
+    </None>
+    <None Include="packages.config" />
+    <None Include="IDL\world_fighter.proto">
+      <Filter>IDL</Filter>
+    </None>
+  </ItemGroup>
+</Project>

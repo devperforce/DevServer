@@ -1,0 +1,43 @@
+syntax = "proto3";
+import "common.proto";
+//import "google/protobuf/wrappers.proto";
+//import "google/protobuf/timestamp.proto";
+
+package ws;
+
+message Vec2 {
+	float x = 1;
+	float y = 2;
+}
+
+message Vec2i {
+	int32 x = 1;
+	int32 y = 2;
+}
+
+message PlayerMoveReq {
+	option (type_enum) = kPlayerMoveReq;
+	Vec2 pos = 1;
+}
+
+message PlayerMoveRes {
+	option (type_enum) = kPlayerMoveRes;
+	Vec2 pos = 1;
+}
+
+message PlayerMoveNoti {
+	option (type_enum) = kPlayerMoveNoti;
+	Vec2 pos = 1;
+}
+
+message FindPathReq {
+	option (type_enum) = kFindPathReq;
+	int32 map_uid = 1;
+	Vec2i from = 2;
+	Vec2i to = 3;
+}
+
+message FindPathRes {
+	option (type_enum) = kFindPathRes;
+	repeated Vec2i paths = 2;
+}

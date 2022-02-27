@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExceptionHandler.h" />
+    <ClInclude Include="Server\Public\Server.h">
+      <Filter>Server\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ExceptionHandler.cpp" />
+    <ClCompile Include="Server\Private\Server.cpp">
+      <Filter>Server\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Server">
+      <UniqueIdentifier>{9df2c499-0cb6-4fc4-a3c9-a476500e44ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\Public">
+      <UniqueIdentifier>{d0ffff69-46c2-42fa-a3a7-f3acb4e7e03a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Server\Private">
+      <UniqueIdentifier>{eb75ee21-a472-4d18-9c7a-2f2f891676f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

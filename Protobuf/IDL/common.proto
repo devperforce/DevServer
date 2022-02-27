@@ -1,0 +1,34 @@
+syntax = "proto3";
+import "google/protobuf/descriptor.proto";
+
+enum ProtocolId {
+	// 로비
+	kLoginReq = 0x0000;
+	kLoginRes = 0x0001;
+
+
+
+	// 커넥션 체크
+	kPingReq = 0x0200;
+	kPingRes = 0x0201;
+
+	// 파이터
+	kPlayerMoveReq = 0x0300;
+	kPlayerMoveRes = 0x0301;
+	kPlayerMoveNoti = 0x0302;
+
+	kFindPathReq = 0x0310;
+	kFindPathRes = 0x0311;
+
+	// 채팅
+	kChatBroadcastReq = 0x0400;
+	kChatBroadcastNotify = 0x0401;
+
+	kChatUnicastReq = 0x0402;
+	kChatUnicastRes = 0x0403;
+	kChatUnicastNotify = 0x0404;
+}
+
+extend google.protobuf.MessageOptions {
+	optional ProtocolId type_enum = 50000;
+}
