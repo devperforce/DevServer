@@ -6,12 +6,9 @@ namespace Protocol {
 
 class Session;
 
-class DungeonHandler {
+class DungeonHandler: boost::noncopyable {
 public:
     static void Register();
-
-    //static void OnLeaveRoom(std::shared_ptr<ws::LeaveRoomReq> req, Session* session);
-
 };
 
 } // namespace Protocol

@@ -22,9 +22,6 @@
     <ClCompile Include="Private\Session.cpp">
       <Filter>Private</Filter>
     </ClCompile>
-    <ClCompile Include="ProtobufHandler.cpp">
-      <Filter>Private</Filter>
-    </ClCompile>
     <ClCompile Include="Private\Handler.cpp">
       <Filter>Private</Filter>
     </ClCompile>

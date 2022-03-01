@@ -21,6 +21,4 @@
 
 #include "Utility/Public/Log.h"
 
-
-
 #endif //PCH_H

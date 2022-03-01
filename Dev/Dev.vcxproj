@@ -172,7 +172,7 @@
     </Link>
     <PostBuildEvent>
       <Command>xcopy "$(SolutionDir)Config\*" "$(OutDir)Config\*" /Y /E
-xcopy "$(SolutionDir)..\Content\*" "$(OutDir)Content\*" /Y /E</Command>
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -199,7 +199,7 @@ xcopy "$(SolutionDir)..\Content\*" "$(OutDir)Content\*" /Y /E</Command>
     </Link>
     <PostBuildEvent>
       <Command>xcopy "$(SolutionDir)Config\*" "$(OutDir)Config\*" /Y /E
-xcopy "$(SolutionDir)..\Content\*" "$(OutDir)Content\*" /Y /E</Command>
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

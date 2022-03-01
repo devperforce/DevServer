@@ -9,7 +9,7 @@ class LoginReq;
 
 namespace Protocol {
 
-class LobbyHandler {
+class LobbyHandler : boost::noncopyable {
 public:
     static void Register();
 };

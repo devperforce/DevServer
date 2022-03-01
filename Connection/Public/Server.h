@@ -8,7 +8,7 @@ class Session;
 
 namespace Engine {
 
-class IServer {
+class IServer : boost::noncopyable {
 public:
 	IServer(boost::asio::io_context& io_context, 
 	        const boost::asio::ip::tcp::endpoint& endpoint);

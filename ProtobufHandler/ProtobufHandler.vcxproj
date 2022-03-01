@@ -171,7 +171,6 @@
     </ClCompile>
     <ClCompile Include="Private\Handler.cpp" />
     <ClCompile Include="Private\Session.cpp" />
-    <ClCompile Include="ProtobufHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

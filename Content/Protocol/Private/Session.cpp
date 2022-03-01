@@ -2,8 +2,6 @@
 #include "Content/Protocol/Public/Session.h"
 #include "Protobuf/Generated/world_status.pb.h"
 
-#include "Content/Object/Public/Player.h"
-
 using namespace ws;
 
 namespace Protocol {
@@ -29,26 +27,16 @@ std::shared_ptr<Session> User::session() const {
 // Session
 Session::Session(boost::asio::io_context& io_context, boost::asio::ip::tcp::socket&& socket) 
     : Common::Session(io_context, std::move(socket)) {
-    std::cout << "[Session] Ctor!" << std::endl;
 }
 
 Session::~Session() {
-    std::cout << "[Session] Dtor!" << std::endl;
 }
-
-/*
-void Session::Dispatch(std::function<void()> msg) {
-    strand_.dispatch(msg);
-}
-*/
 
 void Session::OnConnected() {
-    std::cout << "[Session] OnConnected!" << std::endl;
     StartPing();
 }
 
 void Session::OnDisconnected(const boost::system::error_code& ec) {
-    std::cout << "[Session] OnDisconnected! " << ec.message() << std::endl;
     if (!closed_ && user_ != nullptr) {
         UserRepository::GetInstance().Remove(user_->user_uid());
     }
@@ -74,17 +62,14 @@ void Session::set_user(std::shared_ptr<User> user) {
 
 void Session::UpdatePing() {
     last_ping_time_ = std::chrono::system_clock::now();
-    LOG_ERROR("[Session] Pong last_ping_time: {0}", last_ping_time_.time_since_epoch());
 }
 
 void Session::StartPing() {
     static const auto kWaitDuration = std::chrono::seconds(1);
     ping_timer_ = std::make_shared<boost::asio::steady_timer>(strand_.context(), kWaitDuration);
     auto refresh_ping_time = std::chrono::system_clock::now();
-    LOG_ERROR("[Session] Ping refresh_ping_time: {0}", last_ping_time_.time_since_epoch());
-    ping_timer_->async_wait(strand_.wrap([this, self = shared_from_this(), start_time = refresh_ping_time](const boost::system::error_code& ec) {
-        //LOG_ERROR("[Session] Check PingTime!");
 
+    ping_timer_->async_wait(strand_.wrap([this, self = shared_from_this(), start_time = refresh_ping_time](const boost::system::error_code& ec) {
         if (ec || boost::asio::steady_timer::clock_type::now() < ping_timer_->expires_at()) {
             std::cout << "ping timer cancel!" << std::endl;
             return;
@@ -103,7 +88,6 @@ void Session::StartPing() {
     Send(req);
 }
 
-// SessionRepository
 UserRepository& UserRepository::GetInstance() {
     static UserRepository repository;
     return repository;

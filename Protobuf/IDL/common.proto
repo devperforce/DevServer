@@ -6,8 +6,6 @@ enum ProtocolId {
 	kLoginReq = 0x0000;
 	kLoginRes = 0x0001;
 
-
-
 	// Ŀ�ؼ� üũ
 	kPingReq = 0x0200;
 	kPingRes = 0x0201;

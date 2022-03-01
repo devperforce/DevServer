@@ -13,11 +13,6 @@ using namespace ws;
 namespace Protocol {
 
 void DungeonHandler::Register() {
-    /*
-    Common::Handler<OtherPlayerReq, Session>::Register(&OnOtherPlayer);
-    Common::Handler<CastSkillReq, Session>::Register(&OnCastSkill);
-    Common::Handler<DamageReq, Session>::Register(&OnDamage);
-    */
 }
 
 } // namespace Content

@@ -8,7 +8,7 @@ class Session;
 
 namespace Common {
 
-class IHandler {
+class IHandler : boost::noncopyable{
 public:
     virtual ~IHandler() = default;
     virtual bool OnHandle(const unsigned char* buf, uint32_t size, std::shared_ptr<Engine::Session> session) = 0;

@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Database.cpp" />
     <ClCompile Include="Private\nanodbc.cpp">
       <Filter>Private</Filter>
     </ClCompile>

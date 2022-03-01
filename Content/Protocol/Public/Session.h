@@ -52,13 +52,8 @@ public:
 private:
     void StartPing();
 
-    //std::shared_ptr<Object::Player> player_;
-
     std::shared_ptr<boost::asio::steady_timer> ping_timer_ = nullptr;
     std::chrono::system_clock::time_point last_ping_time_;
-
-    //bool ping_ = false;
-    //Dungeon* dungeon_ = nullptr;
 
     std::shared_ptr<User> user_ = nullptr;
     bool closed_ = false;

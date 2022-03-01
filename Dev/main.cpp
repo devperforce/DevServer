@@ -8,9 +8,6 @@
 #include "Utility/Public/Log.h"
 #include "Utility/Public/Time.h"
 
-#include "Content/Table/Public/Loader.h"
-#include "Content/World/Public/Map.h"
-
 #include "Content/Protocol/Public/Handler/LobbyHandler.h"
 #include "Content/Protocol/Public/Handler/DungeonHandler.h"
 
