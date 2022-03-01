@@ -16,11 +16,9 @@
 static auto OnStop(boost::asio::io_context& io_context) {
     return [&io_context](boost::system::error_code const& ec, int signal_number) {
         if (ec) {
-            std::cout << "called singnal with error!\n";
+            LOG_ERROR("Stop {}", ec.message());
             return;
         }
-        std::cout << "called singnal!\n";
-        std::cout << signal_number << std::endl;
         io_context.stop();
     };
 }
@@ -66,8 +64,6 @@ int main() {
 
         for (int32_t i = 0; i < kThreadCount; ++i) {
             io_threads.emplace_back([&] {
-                std::cout << "io thread id: " << std::this_thread::get_id() << std::endl;
-                //auto sever = std::make_shared<Content::Server>(io_context, endpoint);
                 sever->Start();
                 io_context.run();
             });
