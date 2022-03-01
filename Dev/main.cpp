@@ -40,17 +40,16 @@ int main() {
 
         boost::asio::signal_set signals(io_context, SIGINT);
         signals.async_wait(OnStop(io_context));
+
         
-        if (!Database::Connection::Pool::Initialize(
-            io_context,
-            { L"ctest", L"aaaa.clszgjeysodm.ap-northeast-2.rds.amazonaws.com" },
-            { L"admin", L"1234" },
-            kMaxScaleSize
-        )) {
+        // 테스트 DB 쿼리 1개 풀은 추가 예정
+        auto test_conn = Database::Connection::Create(io_context, 
+                                                      Database::Sql::SqlInfo{ L"example", L"example.clszgjeysodm.ap-northeast-2.rds.amazonaws.com" }, 
+                                                      Database::Sql::AccountInfo{ L"admin", L"1234" });
+        if (test_conn == nullptr) {
             return 0;
         }
-
-        Database::Connection::Pool::Get(1).TestQuery();
+        Database::Connection::TestQuery(*test_conn);
 
         // 핸들러 등록
         Protocol::LobbyHandler::Register();

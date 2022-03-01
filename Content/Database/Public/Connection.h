@@ -20,27 +20,19 @@ class Connection : public std::enable_shared_from_this<Connection>, boost::nonco
 public:
     class Pool {
     public:
-        static bool Initialize(boost::asio::io_context& io_context,
-                               const Sql::SqlInfo& sql_info, 
-                               const Sql::AccountInfo& account_info,
-                               int32_t max_sharding_index = 8);
-        static Connection& Get(int32_t user_uid);
-        static void Clear();
+        // 추후 추가 필요
     };
+    static std::shared_ptr<Connection> Create(boost::asio::io_context& io_context, const Sql::SqlInfo& sql_info, const Sql::AccountInfo& account_info);
 
-    Connection(boost::asio::io_context& io_context,
-               const Sql::SqlInfo& sql_info, 
-               const Sql::AccountInfo& account_info);
-
-    void TestQuery();
-
-    //void GetRanking (std::shared_ptr<Protocol::Session> session);
-
-private:
-    nanodbc::connection* GetConn ();
+    static void TestQuery(Connection& conn);
 
     bool Connect();
     void Disconnect();
+
+private:
+    Connection(boost::asio::io_context& io_context,
+        const Sql::SqlInfo& sql_info, 
+        const Sql::AccountInfo& account_info);
 
     boost::asio::io_context::strand strand_;
     std::shared_ptr<nanodbc::connection> connection_;
