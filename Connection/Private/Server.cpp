@@ -23,7 +23,7 @@ void IServer::Start() {
                 Start();
             });
     } catch (...) {
-        //LOG_ERROR("fuck");
+   
     }
 }
 
